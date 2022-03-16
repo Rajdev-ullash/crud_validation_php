@@ -1,0 +1,20 @@
+Create Table employees(
+  id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  Name varchar(100),
+  Email varchar(100),
+  Department_id int,
+  Phone varchar(100),
+  FOREIGN KEY(Department_id) REFERENCES departments(id)
+
+http://hd.wallpaperswide.com/thumbs/gray-t2.jpg
+
+);
+
+    ALTER TABLE employees ADD Gender varchar(10) after email; //add gender after email
+    ALTER TABLE employees ADD Active boolean after phone;
+    ALTER TABLE employees ADD Address varchar(100) after phone;
+
+    $str="INSERT INTO employees(name,email,phone,department_id) values('".$name."','".$email."','".$phone."', $department)";
+   if(mysqli_query($con,$str)){
+     echo 'successfully inserted';
+   }
